@@ -1,0 +1,15 @@
+.titleHeader{
+    font-size: 3.2em;
+    line-height: 1.1;
+    color:#FFFFFF;
+    font-weight: bold;
+    
+}
+.titleHeader:hover{
+    color: #F27121;
+    transition: color 500ms; 
+    animation: color-change 0.3s ease forwards;
+}
+.titleHeader:not(:hover){
+    transition: color 500ms;
+}

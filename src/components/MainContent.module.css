@@ -1,0 +1,131 @@
+
+.listSpell{
+    width: 25%;  
+    padding: 1rem;
+    float: left;
+    
+    border:3px solid #000000;
+    
+    font-weight: bold;
+}
+
+.infoSpell{
+    min-height: 75%;
+    
+    text-align: center;
+    margin-left: 30%;
+    padding: 1rem;
+
+    border:3px solid #000000;
+    position: relative;
+}
+
+.levelSpell{    
+    width: 100px;
+    height: 40px; 
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.visualSpell{
+    width: 45%;
+    height: 300px;
+    float: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 10px;
+    background-color: #323030;
+    border:3px solid #000000;
+
+}
+.propertiesSpell, .descriptionSpell{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 10px;
+    height: 300px;
+    border:3px solid #000000;
+    
+}
+.propertiesSpell{
+    width: 45%;
+    
+}
+.descriptionSpell{
+    width: auto;
+    text-align:left;
+}
+
+.hero, .enemy{
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    position: relative;
+    font-weight: bold;
+
+}
+.hero{
+    background-color: #27ed4f;
+    top:100px;
+    box-shadow: 0px 0px 5px #27ed4f;
+}
+.enemy{
+    background-color: #ed2727;  
+    top: 50px;
+    left:390px;
+
+    box-shadow: 0px 0px 5px #ed2727;
+
+}
+
+.witchBolt{
+    width: 1px;
+    height: 4px;
+    
+    background-color: #4444f0;
+    
+    border-radius: 100%;
+    position: relative;
+    left:50px;
+    top:20px;
+
+    animation-name: spellDone;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spellDone{
+    from{
+        background-color: #4444f0;
+        left:50px;
+        top:20px;
+
+        box-shadow: 0px 0px 0px #27d9ed;
+    }
+
+    25%{
+        background-color: rgb(54, 150, 247);
+        width: 335px;
+
+        
+    }
+
+    75%{
+        background-color: rgb(136, 192, 247);
+   
+    }
+
+    to{
+        background-color:#4444f0;
+        /* left: 350px; */
+        width: 1px;
+        /* height: 4px; */
+        box-shadow: 0px 0px 50px #27d9ed;
+        
+    }
+}
+
