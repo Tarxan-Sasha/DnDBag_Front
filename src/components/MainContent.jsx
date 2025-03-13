@@ -50,6 +50,13 @@ function MainContent(){
         return  `${data[id].componentS}, ${data[id].componentV}, ${data[id].componentM}`;
     };
 
+    const getSpellLevel= (id) => {
+        if(!data || data.length === 0 || !data[id]){
+            return "Нет соединения с сервером";
+        }
+        return data[id].level;
+    }
+
     useEffect(()=>{
 
         fetch("http://localhost:8080/spells/allSpells").then( function(response){
@@ -90,15 +97,26 @@ function MainContent(){
                             setId(1);
                         }}>Огненный шар</button></li>
 
-                        <li><button id="wordDeath" onClick={() =>{
+                        <li><button id="acidSplashes" onClick={() =>{
                             setId(2);
-                        }}>Слово Силы: Смерть</button></li>
-                        <li> Желтый знак</li>
+                        }}>Брызги кислоты</button></li>
+                        <li><button id="FlashOfSwords" onClick={ () =>{
+                            setId(3);
+                        }}>Вспышка мечей</button></li>
+
+                        <li><button id="LightningLasso" onClick={ () =>{
+                            setId(4);
+                        }}>Лассо молнии</button></li>
+                        
+                        <li><button id="puffOfSmoke" onClick={ () =>{
+                            setId(5);
+                        }}>Клуб дыма</button></li>
+
                     </ul>
 
                 </section>
                 <section id="infoSpellId" className={styles.infoSpell}>
-                        <div id="levelSpell" className={styles.levelSpell}> Заговор</div>
+                        <div id="levelSpell" className={styles.levelSpell}>{getSpellLevel(id)}</div>
                         <h1 id="nameSpell">{getSpellName(id)}</h1>
 
 
